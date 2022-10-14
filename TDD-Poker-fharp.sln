@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TDD-Poker-fharp-Test", "TDD-Poker-fharp-Test\TDD-Poker-fharp-Test.fsproj", "{A54B685B-FDDF-46DF-8662-6E108C53B625}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TDD-Poker-fsharp-Test", "TDD-Poker-fsharp-Test\TDD-Poker-fsharp-Test.fsproj", "{A54B685B-FDDF-46DF-8662-6E108C53B625}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TDD-Poker-fsharp", "TDD-Poker-fsharp\TDD-Poker-fsharp.fsproj", "{4B39F214-EE9E-4D51-A5FE-892A449C3423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{A54B685B-FDDF-46DF-8662-6E108C53B625}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A54B685B-FDDF-46DF-8662-6E108C53B625}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A54B685B-FDDF-46DF-8662-6E108C53B625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B39F214-EE9E-4D51-A5FE-892A449C3423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B39F214-EE9E-4D51-A5FE-892A449C3423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B39F214-EE9E-4D51-A5FE-892A449C3423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B39F214-EE9E-4D51-A5FE-892A449C3423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
