@@ -4,22 +4,10 @@
     <projectFile>TDD-Poker-fharp-Test/TDD-Poker-fharp-Test.fsproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f251180-fa74-485e-bebf-b44a0ab4a0a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fsharp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fsharp/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fsharp/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fsharp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/TwoCardsPokerTest.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TDD-Poker-fsharp.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TDD-Poker-fsharp/TwoHandPoker.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fharp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fharp/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fharp/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fharp/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDD-Poker-fharp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TDD-Poker-fsharp.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/CardTest.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/CardTest.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/TDD-Poker-fsharp-Test.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/TDD-Poker-fsharp-Test.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDD-Poker-fsharp/TDD-Poker-fsharp.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/TDD-Poker-fsharp/TDD-Poker-fsharp.fsproj" afterDir="false" />
+    <list default="true" id="1f251180-fa74-485e-bebf-b44a0ab4a0a0" name="Changes" comment="Add hand judgement.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TDD-Poker-fharp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/TwoCardsPokerTest.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TDD-Poker-fsharp-Test/TwoCardsPokerTest.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TDD-Poker-fsharp/TwoHandPoker.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TDD-Poker-fsharp/TwoHandPoker.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +71,7 @@
       <workItem from="1665672668331" duration="340000" />
       <workItem from="1665754537229" duration="3862000" />
       <workItem from="1666100808354" duration="1021000" />
-      <workItem from="1666183173993" duration="1916000" />
+      <workItem from="1666183173993" duration="3865000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1665672969033</created>
@@ -113,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666101805153</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add hand judgement.">
+      <created>1666186259461</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666186259461</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +133,7 @@
     <MESSAGE value="Add first test." />
     <MESSAGE value="Add Card Notation Test." />
     <MESSAGE value="Add card equality test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add card equality test." />
+    <MESSAGE value="Add hand judgement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add hand judgement." />
   </component>
 </project>
