@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>TDD_Poker_fharp_Test</RootNamespace>
+        <RootNamespace>TDD_Poker_fsharp_Test</RootNamespace>
 
         <IsPackable>false</IsPackable>
         <GenerateProgramFile>false</GenerateProgramFile>
@@ -11,6 +11,7 @@
 
     <ItemGroup>
         <Compile Include="CardTest.fs" />
+        <Compile Include="TwoCardsPokerTest.fs" />
     </ItemGroup>
 
     <ItemGroup>

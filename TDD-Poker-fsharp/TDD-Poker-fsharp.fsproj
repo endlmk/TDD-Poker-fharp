@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <Compile Include="Card.fs" />
+        <Compile Include="TwoHandPoker.fs" />
     </ItemGroup>
 
 </Project>

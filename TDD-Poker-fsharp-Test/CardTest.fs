@@ -1,4 +1,4 @@
-module TDD_Poker_fsharp_Test
+module TDD_Poker_fsharp_Test.CardTest
 
 open NUnit.Framework
 open TDD_Poker_fsharp
