@@ -1,22 +1,22 @@
 module TDD_Poker_fsharp.TwoHandPoker
 
-type Hands = { cards: Card.Card array }
+type Cards = { cards: Card.Card array }
 
-let createHands suitranktuples =
-    let cards = suitranktuples |> Seq.map (fun (s, r) -> Card.create s r) |> Seq.toArray
+let createCards suitRankTuples =
+    let cards = suitRankTuples |> Seq.map (fun (s, r) -> Card.create s r) |> Seq.toArray
     { cards = cards }
 
 let isCardsPair a b =
     Card.hasSameRank a b
 
-let isPair hands =
-    isCardsPair hands.cards[0] hands.cards[1]
+let isPair cards =
+    isCardsPair cards.cards[0] cards.cards[1]
     
 let isCardsFlush a b =
     Card.hasSameSuit a b
 
-let isFlush hands =
-    isCardsFlush hands.cards[0] hands.cards[1]
+let isFlush cards =
+    isCardsFlush cards.cards[0] cards.cards[1]
 
 let isCardsStraight (a: Card.Card)  (b: Card.Card) =
     let rankOrder = [| "2"; "3"; "4"; "5"; "6"; "7"; "8"; "9"; "10"; "J"; "Q"; "K"; "A" |]
@@ -29,12 +29,31 @@ let isCardsStraight (a: Card.Card)  (b: Card.Card) =
     
     minDistanceOnCircular index_a index_b rankOrder.Length = 1
     
-let isStraight hands =
-    isCardsStraight hands.cards[0] hands.cards[1]
+let isStraight cards =
+    isCardsStraight cards.cards[0] cards.cards[1]
     
-let isStraightFlush hands =
-    (isStraight hands) && (isFlush hands)
+let isStraightFlush cards =
+    (isStraight cards) && (isFlush cards)
     
-let isHighCard hands =
-    not (isPair hands) && not (isFlush hands) && not (isStraight hands)
+let isHighCard cards =
+    not (isPair cards) && not (isFlush cards) && not (isStraight cards)
 
+type Result =
+    Win | Lose | Draw
+type Hands =
+    HighCard | Flush | Straight | Pair | StraightFlush
+    
+let judgeHands cards =
+    if isStraightFlush cards then StraightFlush
+    elif isPair cards then Pair
+    elif isStraight cards then Straight
+    elif isFlush cards then Flush
+    else HighCard
+    
+let judge myCards opponentCards =
+    let myHands = judgeHands myCards
+    let opponentHands = judgeHands opponentCards
+    
+    if myHands > opponentHands then Win
+    elif myHands < opponentHands then Lose
+    else Draw
