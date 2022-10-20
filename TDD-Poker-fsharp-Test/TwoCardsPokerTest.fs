@@ -11,9 +11,11 @@ let judgeHandsTest() =
     Assert.AreEqual(true, TwoHandPoker.isFlush (Card.create "♦" "4") (Card.create "♦" "3"))
     Assert.AreEqual(false, TwoHandPoker.isFlush (Card.create "♣" "4") (Card.create "♦" "4"))
     
-    Assert.AreEqual(true, TwoHandPoker.isHighCard (Card.create "♥" "4") (Card.create "♦" "3"))
-    Assert.AreEqual(false, TwoHandPoker.isHighCard (Card.create "♥" "4") (Card.create "♥" "3"))
-    Assert.AreEqual(false, TwoHandPoker.isHighCard (Card.create "♥" "3") (Card.create "♦" "3"))
+    Assert.AreEqual(true, TwoHandPoker.isHighCard (Card.create "♥" "3") (Card.create "♦" "5"))
+    Assert.AreEqual(false, TwoHandPoker.isHighCard (Card.create "♥" "4") (Card.create "♥" "3")) // StraightFlush
+    Assert.AreEqual(false, TwoHandPoker.isHighCard (Card.create "♥" "3") (Card.create "♦" "3")) // Pair
+    Assert.AreEqual(false, TwoHandPoker.isHighCard (Card.create "♥" "4") (Card.create "♦" "3")) // Straight
+    Assert.AreEqual(false, TwoHandPoker.isHighCard (Card.create "♥" "4") (Card.create "♥" "6")) // Flush
     
     Assert.AreEqual(true, TwoHandPoker.isStraight (Card.create "♥" "4") (Card.create "♦" "3"))
     Assert.AreEqual(false, TwoHandPoker.isStraight (Card.create "♥" "5") (Card.create "♦" "3"))

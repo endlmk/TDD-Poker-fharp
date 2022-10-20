@@ -5,10 +5,6 @@ let isPair a b =
     
 let isFlush a b =
     Card.hasSameSuit a b
-    
-let isHighCard a b =
-    not (isPair a b) && not (isFlush a b)
-
 
 let isStraight (a: Card.Card)  (b: Card.Card) =
     let rankOrder = [| "2"; "3"; "4"; "5"; "6"; "7"; "8"; "9"; "10"; "J"; "Q"; "K"; "A" |]
@@ -23,3 +19,6 @@ let isStraight (a: Card.Card)  (b: Card.Card) =
     
 let isStraightFlush a b =
     (isStraight a b) && (isFlush a b)
+    
+let isHighCard a b =
+    not (isPair a b) && not (isFlush a b) && not (isStraight a b)
