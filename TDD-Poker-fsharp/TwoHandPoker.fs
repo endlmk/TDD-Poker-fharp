@@ -48,29 +48,26 @@ type Hands =
 
 type HandsWithRank = { hands: Hands; rank: int array; }
 
-let rankOfStraight cards =
-    let rank1 = rankValue cards.cards[0].rank
-    let rank2 = rankValue cards.cards[1].rank
-    let sorted = Array.sort [| rank1; rank2;|]
-    
-    if sorted[0] = 0 && sorted[1] = 12 then [| 0 |]
-    else [| sorted[1] |]
-
-let rankOfPair cards =
-    let rank = rankValue cards.cards[0].rank
-    [| rank |]
-
-let rankOfFlushOrHighCard cards =
+let rankOfAllCards cards =
     let rank1 = rankValue cards.cards[0].rank
     let rank2 = rankValue cards.cards[1].rank
     Array.sortDescending [| rank1; rank2;|]
+
+let rankOfStraight cards =
+    let rankOfCards = rankOfAllCards cards
+    
+    if rankOfCards[0] = rankValue "A" && rankOfCards[1] = rankValue "2" then [| rankValue "2" |]
+    else [| rankOfCards[0] |]
+
+let rankOfPair cards =
+    [| (rankOfAllCards cards)[0] |]
 
 let judgeHands cards =
     if isStraightFlush cards then { hands = StraightFlush; rank = rankOfStraight cards; }
     elif isPair cards then { hands = Pair; rank = rankOfPair cards; }
     elif isStraight cards then { hands = Straight; rank = rankOfStraight cards; }
-    elif isFlush cards then { hands = Flush; rank = rankOfFlushOrHighCard cards; }
-    else { hands = HighCard; rank = rankOfFlushOrHighCard cards; }
+    elif isFlush cards then { hands = Flush; rank = rankOfAllCards cards; }
+    else { hands = HighCard; rank = rankOfAllCards cards; }
 
 let judge myCards opponentCards =
     let myHands = judgeHands myCards
